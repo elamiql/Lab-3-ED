@@ -1,0 +1,32 @@
+# Binarios compilados
+bin/
+*.exe
+*.o
+*.obj
+*.out
+
+# Dataset: se sube al repo
+
+# Resultados de experimentos
+results/*.csv
+!results/.gitkeep
+
+# Graficos generados por el analisis en Python
+analysis/figs/*.png
+!analysis/figs/.gitkeep
+
+# Entorno virtual de Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Archivos de IDEs
+.vscode/
+.idea/
+*.suo
+*.user
+
+# Archivos temporales de Windows
+Thumbs.db
+desktop.ini
