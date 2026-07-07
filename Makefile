@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -std=c++17 -O2 -Wall -Wextra -Iinclude
+CXXFLAGS = -std=c++20 -O2 -Wall -Wextra -Iinclude
 
 # src/main.cpp: el harness de experimentos (Parte 2), genera results.csv
 MAIN_SRC = src/main.cpp

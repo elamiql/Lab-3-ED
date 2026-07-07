@@ -24,32 +24,63 @@ public:
             return tweets;
         }
 
-        std::string line;
-    
-        if (!std::getline(file, line)) {
-            return tweets;
-        }
+        std::vector<std::string> fields;
+        std::string field;
+        bool in_quotes = false;
+        bool header_skipped = false;
 
-        // Leer registro por registro
-        while (std::getline(file, line)) {
-            if (line.empty()) continue;
+        auto flush_record = [&]() {
+            if (fields.empty() && field.empty()) {
+                return;
+            }
 
-            std::stringstream ss(line);
-            std::string token_id;
-            std::string token_name;
+            fields.push_back(field);
+            field.clear();
 
-            // Suponiendo formato estándar delimitado por punto y coma 
-            if (std::getline(ss, token_id, ';') && std::getline(ss, token_name, ';')) {
+            if (!header_skipped) {
+                header_skipped = true;
+                fields.clear();
+                return;
+            }
+
+            if (fields.size() >= 8) {
                 try {
                     Tweet tweet;
-                    tweet.user_id = std::stoll(token_id); 
-                    tweet.user_screen_name = token_name;
+                    tweet.user_id = std::stoll(fields[5]);
+                    tweet.user_screen_name = fields[7];
                     tweets.push_back(tweet);
-                } catch (const std::exception& e) {
-                    continue; 
+                } catch (const std::exception&) {
+                    // Saltar registros malformados sin detener el benchmark.
                 }
             }
+
+            fields.clear();
+        };
+
+        char ch;
+        while (file.get(ch)) {
+            if (ch == '\r') {
+                continue;
+            }
+
+            if (ch == '"') {
+                if (in_quotes && file.peek() == '"') {
+                    field.push_back('"');
+                    file.get(ch);
+                } else {
+                    in_quotes = !in_quotes;
+                }
+            } else if (ch == ',' && !in_quotes) {
+                fields.push_back(field);
+                field.clear();
+            } else if (ch == '\n' && !in_quotes) {
+                flush_record();
+            } else {
+                field.push_back(ch);
+            }
         }
+
+        flush_record();
 
         file.close();
         return tweets;

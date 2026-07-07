@@ -1,0 +1,176 @@
+REPORTE DE BENCHMARK
+
+Archivo origen: benchmark_results.csv
+Total de corridas registradas: 2880
+Configuraciones evaluadas: 8
+Checkpoints evaluados: 18 (10000..180000)
+Cada grupo del reporte corresponde a 20 repeticiones.
+
+RESUMEN POR GRUPOS DE 20 EXPERIMENTOS
+structure;collision;key_type;n_tweets;runs;mean_time_ms;std_time_ms;mean_size_bytes;size_human
+chaining;separate;int;10000;20;5.2271;0.6253;279624;273.07 KB
+chaining;separate;string;10000;20;2.5784;0.4241;463128;452.27 KB
+open_addressing;double_hashing;int;10000;20;1.1905;0.1460;264464;258.27 KB
+open_addressing;double_hashing;string;10000;20;4.1572;8.3941;661160;645.66 KB
+open_addressing;linear;int;10000;20;1.3039;0.2409;264464;258.27 KB
+open_addressing;linear;string;10000;20;2.5743;0.6593;661160;645.66 KB
+open_addressing;quadratic;int;10000;20;1.2264;0.1722;264464;258.27 KB
+open_addressing;quadratic;string;10000;20;2.4228;0.5282;661160;645.66 KB
+chaining;separate;int;20000;20;11.6689;1.1894;516968;504.85 KB
+chaining;separate;string;20000;20;6.0704;1.5299;847736;827.87 KB
+open_addressing;double_hashing;int;20000;20;2.5372;0.3999;529136;516.73 KB
+open_addressing;double_hashing;string;20000;20;6.8943;8.3396;1322840;1.26 MB
+open_addressing;linear;int;20000;20;3.6080;3.1744;529136;516.73 KB
+open_addressing;linear;string;20000;20;6.1651;3.5347;1322840;1.26 MB
+open_addressing;quadratic;int;20000;20;2.5813;0.2766;529136;516.73 KB
+open_addressing;quadratic;string;20000;20;5.3551;1.0750;1322840;1.26 MB
+chaining;separate;int;30000;20;20.5611;2.4058;776532;758.33 KB
+chaining;separate;string;30000;20;11.8458;2.5130;1217436;1.16 MB
+open_addressing;double_hashing;int;30000;20;3.3049;0.5504;529136;516.73 KB
+open_addressing;double_hashing;string;30000;20;8.4517;8.3417;1322840;1.26 MB
+open_addressing;linear;int;30000;20;4.4386;3.2919;529136;516.73 KB
+open_addressing;linear;string;30000;20;8.0408;4.2100;1322840;1.26 MB
+open_addressing;quadratic;int;30000;20;3.3629;0.3249;529136;516.73 KB
+open_addressing;quadratic;string;30000;20;6.8155;1.2219;1322840;1.26 MB
+chaining;separate;int;40000;20;23.8252;2.6774;859580;839.43 KB
+chaining;separate;string;40000;20;13.3978;2.6328;1371668;1.31 MB
+open_addressing;double_hashing;int;40000;20;4.0803;0.6693;529136;516.73 KB
+open_addressing;double_hashing;string;40000;20;10.1959;8.3900;1322840;1.26 MB
+open_addressing;linear;int;40000;20;5.2799;3.4398;529136;516.73 KB
+open_addressing;linear;string;40000;20;9.7141;4.5931;1322840;1.26 MB
+open_addressing;quadratic;int;40000;20;4.1406;0.3920;529136;516.73 KB
+open_addressing;quadratic;string;40000;20;8.2941;1.4292;1322840;1.26 MB
+chaining;separate;int;50000;20;27.4581;2.9327;937112;915.15 KB
+chaining;separate;string;50000;20;14.9189;2.7986;1515656;1.45 MB
+open_addressing;double_hashing;int;50000;20;6.1133;1.1108;1058576;1.01 MB
+open_addressing;double_hashing;string;50000;20;15.1039;8.8144;2646440;2.52 MB
+open_addressing;linear;int;50000;20;7.9176;4.8081;1058576;1.01 MB
+open_addressing;linear;string;50000;20;16.3021;7.1443;2646440;2.52 MB
+open_addressing;quadratic;int;50000;20;6.1318;0.5437;1058576;1.01 MB
+open_addressing;quadratic;string;50000;20;13.0305;2.2922;2646440;2.52 MB
+chaining;separate;int;60000;20;31.8846;3.3078;1023548;999.56 KB
+chaining;separate;string;60000;20;16.5005;2.9848;1676180;1.60 MB
+open_addressing;double_hashing;int;60000;20;6.9097;1.2684;1058576;1.01 MB
+open_addressing;double_hashing;string;60000;20;16.6836;8.9089;2646440;2.52 MB
+open_addressing;linear;int;60000;20;8.9601;5.6293;1058576;1.01 MB
+open_addressing;linear;string;60000;20;18.2374;7.7114;2646440;2.52 MB
+open_addressing;quadratic;int;60000;20;6.8810;0.6126;1058576;1.01 MB
+open_addressing;quadratic;string;60000;20;14.5620;2.5080;2646440;2.52 MB
+chaining;separate;int;70000;20;36.2800;4.0577;1086996;1.04 MB
+chaining;separate;string;70000;20;18.0284;3.2303;1794012;1.71 MB
+open_addressing;double_hashing;int;70000;20;7.7150;1.5334;1058576;1.01 MB
+open_addressing;double_hashing;string;70000;20;18.2517;9.0092;2646440;2.52 MB
+open_addressing;linear;int;70000;20;9.7219;5.7339;1058576;1.01 MB
+open_addressing;linear;string;70000;20;19.9348;7.9819;2646440;2.52 MB
+open_addressing;quadratic;int;70000;20;7.6077;0.7322;1058576;1.01 MB
+open_addressing;quadratic;string;70000;20;16.0630;2.8484;2646440;2.52 MB
+chaining;separate;int;80000;20;41.7853;4.4627;1154336;1.10 MB
+chaining;separate;string;80000;20;19.7675;3.7100;1919072;1.83 MB
+open_addressing;double_hashing;int;80000;20;8.5275;1.6143;1058576;1.01 MB
+open_addressing;double_hashing;string;80000;20;19.9686;9.0681;2646440;2.52 MB
+open_addressing;linear;int;80000;20;10.5312;5.9011;1058576;1.01 MB
+open_addressing;linear;string;80000;20;21.5862;8.2328;2646440;2.52 MB
+open_addressing;quadratic;int;80000;20;8.3773;0.8432;1058576;1.01 MB
+open_addressing;quadratic;string;80000;20;17.7127;3.2772;2646440;2.52 MB
+chaining;separate;int;90000;20;54.2195;6.2969;1454308;1.39 MB
+chaining;separate;string;90000;20;31.0005;5.5501;2251468;2.15 MB
+open_addressing;double_hashing;int;90000;20;9.2368;1.7073;1058576;1.01 MB
+open_addressing;double_hashing;string;90000;20;21.5876;9.1364;2646440;2.52 MB
+open_addressing;linear;int;90000;20;11.3426;6.1710;1058576;1.01 MB
+open_addressing;linear;string;90000;20;23.1637;8.6284;2646440;2.52 MB
+open_addressing;quadratic;int;90000;20;9.0455;0.9344;1058576;1.01 MB
+open_addressing;quadratic;string;90000;20;19.0833;3.5499;2646440;2.52 MB
+chaining;separate;int;100000;20;56.4003;6.4107;1484884;1.42 MB
+chaining;separate;string;100000;20;32.7541;5.6855;2308252;2.20 MB
+open_addressing;double_hashing;int;100000;20;9.9178;1.7650;1058576;1.01 MB
+open_addressing;double_hashing;string;100000;20;23.0870;9.2247;2646440;2.52 MB
+open_addressing;linear;int;100000;20;12.0462;6.3349;1058576;1.01 MB
+open_addressing;linear;string;100000;20;24.7445;9.0652;2646440;2.52 MB
+open_addressing;quadratic;int;100000;20;9.7219;1.0396;1058576;1.01 MB
+open_addressing;quadratic;string;100000;20;20.5120;3.9666;2646440;2.52 MB
+chaining;separate;int;110000;20;58.7544;6.4420;1508600;1.44 MB
+chaining;separate;string;110000;20;34.2782;5.8978;2352296;2.24 MB
+open_addressing;double_hashing;int;110000;20;10.6695;1.9153;1058576;1.01 MB
+open_addressing;double_hashing;string;110000;20;24.4636;9.3158;2646440;2.52 MB
+open_addressing;linear;int;110000;20;12.7978;6.5694;1058576;1.01 MB
+open_addressing;linear;string;110000;20;26.2915;9.4592;2646440;2.52 MB
+open_addressing;quadratic;int;110000;20;10.4156;1.2224;1058576;1.01 MB
+open_addressing;quadratic;string;110000;20;21.8662;4.2399;2646440;2.52 MB
+chaining;separate;int;120000;20;61.2886;6.4895;1530440;1.46 MB
+chaining;separate;string;120000;20;35.8583;6.1885;2392856;2.28 MB
+open_addressing;double_hashing;int;120000;20;11.3919;2.0154;1058576;1.01 MB
+open_addressing;double_hashing;string;120000;20;25.7868;9.4430;2646440;2.52 MB
+open_addressing;linear;int;120000;20;13.5298;6.8029;1058576;1.01 MB
+open_addressing;linear;string;120000;20;27.7978;9.9451;2646440;2.52 MB
+open_addressing;quadratic;int;120000;20;11.0916;1.3334;1058576;1.01 MB
+open_addressing;quadratic;string;120000;20;23.1836;4.5225;2646440;2.52 MB
+chaining;separate;int;130000;20;63.8459;6.5745;1550040;1.48 MB
+chaining;separate;string;130000;20;37.3785;6.4468;2429256;2.32 MB
+open_addressing;double_hashing;int;130000;20;12.0588;2.1016;1058576;1.01 MB
+open_addressing;double_hashing;string;130000;20;27.1255;9.5849;2646440;2.52 MB
+open_addressing;linear;int;130000;20;14.2674;6.9391;1058576;1.01 MB
+open_addressing;linear;string;130000;20;29.3105;10.3516;2646440;2.52 MB
+open_addressing;quadratic;int;130000;20;11.7543;1.4337;1058576;1.01 MB
+open_addressing;quadratic;string;130000;20;24.4890;4.8028;2646440;2.52 MB
+chaining;separate;int;140000;20;66.2982;6.5962;1564460;1.49 MB
+chaining;separate;string;140000;20;38.8534;6.8010;2456036;2.34 MB
+open_addressing;double_hashing;int;140000;20;12.6843;2.1572;1058576;1.01 MB
+open_addressing;double_hashing;string;140000;20;28.4127;9.6718;2646440;2.52 MB
+open_addressing;linear;int;140000;20;15.0187;7.1092;1058576;1.01 MB
+open_addressing;linear;string;140000;20;30.7674;10.6549;2646440;2.52 MB
+open_addressing;quadratic;int;140000;20;12.3986;1.5347;1058576;1.01 MB
+open_addressing;quadratic;string;140000;20;25.7552;5.0721;2646440;2.52 MB
+chaining;separate;int;150000;20;69.8382;6.5989;1615364;1.54 MB
+chaining;separate;string;150000;20;40.6869;7.6668;2550572;2.43 MB
+open_addressing;double_hashing;int;150000;20;13.4388;2.2196;1058576;1.01 MB
+open_addressing;double_hashing;string;150000;20;30.0206;9.8053;2646440;2.52 MB
+open_addressing;linear;int;150000;20;16.4630;8.8297;1058576;1.01 MB
+open_addressing;linear;string;150000;20;32.4802;10.9378;2646440;2.52 MB
+open_addressing;quadratic;int;150000;20;13.2012;1.6572;1058576;1.01 MB
+open_addressing;quadratic;string;150000;20;27.2087;5.2717;2646440;2.52 MB
+chaining;separate;int;160000;20;73.4415;6.6482;1697348;1.62 MB
+chaining;separate;string;160000;20;42.6270;7.8881;2702828;2.58 MB
+open_addressing;double_hashing;int;160000;20;14.3781;2.3175;1058576;1.01 MB
+open_addressing;double_hashing;string;160000;20;32.1553;10.0567;2646440;2.52 MB
+open_addressing;linear;int;160000;20;17.5065;9.0503;1058576;1.01 MB
+open_addressing;linear;string;160000;20;34.3056;11.2627;2646440;2.52 MB
+open_addressing;quadratic;int;160000;20;14.0684;1.7550;1058576;1.01 MB
+open_addressing;quadratic;string;160000;20;28.8149;5.5049;2646440;2.52 MB
+chaining;separate;int;170000;20;76.5522;6.8122;1752508;1.67 MB
+chaining;separate;string;170000;20;44.5180;8.1106;2805268;2.68 MB
+open_addressing;double_hashing;int;170000;20;15.2746;2.4610;1058576;1.01 MB
+open_addressing;double_hashing;string;170000;20;34.2103;10.2856;2646440;2.52 MB
+open_addressing;linear;int;170000;20;18.9671;10.4718;1058576;1.01 MB
+open_addressing;linear;string;170000;20;36.1629;11.5643;2646440;2.52 MB
+open_addressing;quadratic;int;170000;20;14.8490;1.8273;1058576;1.01 MB
+open_addressing;quadratic;string;170000;20;30.3976;5.7560;2646440;2.52 MB
+chaining;separate;int;180000;20;80.1265;7.0875;1782776;1.70 MB
+chaining;separate;string;180000;20;46.1886;8.3353;2861480;2.73 MB
+open_addressing;double_hashing;int;180000;20;16.0191;2.6094;1058576;1.01 MB
+open_addressing;double_hashing;string;180000;20;35.9341;10.5946;2646440;2.52 MB
+open_addressing;linear;int;180000;20;19.9863;11.0628;1058576;1.01 MB
+open_addressing;linear;string;180000;20;38.1493;12.9176;2646440;2.52 MB
+open_addressing;quadratic;int;180000;20;15.5078;1.8498;1058576;1.01 MB
+open_addressing;quadratic;string;180000;20;31.7925;5.8827;2646440;2.52 MB
+
+RESUMEN GLOBAL POR CONFIGURACION
+structure;collision;key_type;runs;mean_time_ms;std_time_ms;mean_size_bytes;size_human
+chaining;separate;int;360;47.7475;23.3456;1254190;1.20 MB
+chaining;separate;string;360;27.0695;14.7090;1995289;1.90 MB
+open_addressing;double_hashing;int;360;9.1916;4.6904;926219;904.51 KB
+open_addressing;double_hashing;string;360;21.2495;12.9743;2315547;2.21 MB
+open_addressing;linear;int;360;11.3159;8.3952;926219;904.51 KB
+open_addressing;linear;string;360;22.5405;13.4967;2315547;2.21 MB
+open_addressing;quadratic;int;360;9.0202;4.3603;926219;904.51 KB
+open_addressing;quadratic;string;360;18.7421;9.4779;2315547;2.21 MB
+
+MEMORIA PROMEDIO EN EL CHECKPOINT FINAL (180000)
+structure;collision;key_type;mean_size_bytes;size_human
+chaining;separate;int;1782776;1.70 MB
+chaining;separate;string;2861480;2.73 MB
+open_addressing;double_hashing;int;1058576;1.01 MB
+open_addressing;double_hashing;string;2646440;2.52 MB
+open_addressing;linear;int;1058576;1.01 MB
+open_addressing;linear;string;2646440;2.52 MB
+open_addressing;quadratic;int;1058576;1.01 MB
+open_addressing;quadratic;string;2646440;2.52 MB
